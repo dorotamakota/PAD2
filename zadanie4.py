@@ -7,24 +7,17 @@ import math
 A = [0, 3, 2, 5]
 B = [0, 3, 1, 4]
 
-print("Dodaj A i B:")
-print(np.add(A, B))
+print(f"Add A and B: {np.add(A, B)}")
 
-print("Obejmij B od A:")
-print(np.subtract(B, A))
+print(f"Subtract B from A: {np.subtract(B, A)}")
 
-print("Pomnóż wektor A przez skalar a=4:")
-print(np.multiply(A, 4))
+print(f"Multiply the vector A by the scalar a = 4: {np.multiply(A, 4)}")
 
-print("Oblicz iloczyn skalarny wektorów A i B:")
-print(np.dot(A, B))
+print(f"Calculate the dot product of vectors A and B: {np.dot(A, B)}")
 
-print("Znajdź długość wektora B:")
-print("matematycznie, pythonowo:")
-suma_kwadratow = 0
+sum_sq = 0
 for element in B:
-    suma_kwadratow += element**2
-# pierwiastek sumy kwadratów:
-print(math.sqrt(suma_kwadratow))
-print("numpy'owo:")
-print(np.sqrt(np.sum(np.square(B))))
+    sum_sq += element**2
+print(f"Find the length of vector B (math, py): {math.sqrt(sum_sq)}")
+
+print(f"Find the length of vector B (numpy): {np.sqrt(np.sum(np.square(B)))}")
